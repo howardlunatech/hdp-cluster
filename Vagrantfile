@@ -1,6 +1,4 @@
-
 Vagrant.configure(2) do |config|
-
   config.vm.define "master" do |master|
     master.vm.box = "hdp_vm"
     master.vm.network "forwarded_port", guest: 8080, host: 8080
@@ -56,3 +54,7 @@ Vagrant.configure(2) do |config|
     end
   end
 end
+
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
