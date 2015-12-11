@@ -11,7 +11,7 @@ Prior to working with this project, the following components should be installed
  * [Ansible (1.9.4)](http://www.ansible.com/home)
 
 # Getting started
-- Run `vagrant box add hdp_vm https://github.com/2creatives/vagrant-centos/releases/download/v6.5.1/centos65-x86_64-20131205.box`
+- Run `./add.sh` or `vagrant box add hdp_vm https://atlas.hashicorp.com/nrel/boxes/CentOS-6.7-x86_64/versions/1.0.0/providers/virtualbox.box`
 - Run `vagrant up` to spin up three vm's and have them bootstrapped.
 - Run `vagrant ssh master` to ssh into the master node.
 - Become root and run `ambari-server setup` to start the ambari setup process. When prompted, stick with the defaults.
