@@ -6,3 +6,9 @@
 
 - name: install ambari-server
   yum: state=present name=ambari-server
+
+- name: setup ambari-server
+  shell: yes "" | ambari-server setup
+
+- name: start ambari-server
+  service: name=ambari-server state=started enabled=yes
