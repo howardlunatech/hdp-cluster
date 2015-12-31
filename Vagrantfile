@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
     master.vm.provision "ansible" do |ansible|
       ansible.verbose = "v"
-      ansible.playbook = "provisioning/ambari.yml"
+      ansible.playbook = "provisioning/hdp.yml"
       ansible.sudo = true
       ansible.host_key_checking = false
     end
@@ -30,7 +30,7 @@ Vagrant.configure(2) do |config|
 
     slave1.vm.provision "ansible" do |ansible|
       ansible.verbose = "v"
-      ansible.playbook = "provisioning/ambari.yml"
+      ansible.playbook = "provisioning/hdp.yml"
       ansible.sudo = true
       ansible.host_key_checking = false
     end
@@ -48,7 +48,7 @@ Vagrant.configure(2) do |config|
 
     slave2.vm.provision "ansible" do |ansible|
       ansible.verbose = "v"
-      ansible.playbook = "provisioning/ambari.yml"
+      ansible.playbook = "provisioning/hdp.yml"
       ansible.sudo = true
       ansible.host_key_checking = false
     end

@@ -29,6 +29,9 @@
 - name: Install elinks text mode web browser
   yum: state=present name=elinks
 
+- name: Install mount.nfs and showmount etc for using NFSGateway to access HDFS
+  yum: state=present name=nfs-utils
+
 - name: Install java
   yum: state=present name=java-1.8.0-openjdk-headless.x86_64
 
@@ -57,10 +60,10 @@
   lineinfile: dest=/etc/hosts regexp='^127.0.0.1' state=present line="127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4"
 
 - name: modify hostsfile
-  lineinfile: dest=/etc/hosts line="192.168.100.10 master.locallab.com"
+  lineinfile: dest=/etc/hosts line="192.168.100.10 master.locallab.com master"
 
 - name: modify hostsfile
-  lineinfile: dest=/etc/hosts line="192.168.100.20 slave1.locallab.com"
+  lineinfile: dest=/etc/hosts line="192.168.100.20 slave1.locallab.com slave1"
 
 - name: modify hostsfile
-  lineinfile: dest=/etc/hosts line="192.168.100.30 slave2.locallab.com"
+  lineinfile: dest=/etc/hosts line="192.168.100.30 slave2.locallab.com slave2"
